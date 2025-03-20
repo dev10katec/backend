@@ -8,7 +8,9 @@
     "start": "nodemon -r module-alias/register src/index.js",
     "prettier:fix": "npx prettier --write .",
     "start:prod": "pm2 start ecosystem.config.js",
-    "cli": "node cli.js"
+    "cli": "node cli.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "keywords": [
     "cloud server"
