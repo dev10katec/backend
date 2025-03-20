@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@bootstrap/*": ["bootstrap/*"],
+      "@commands/*": ["commands/*"],
+      "@config/*": ["config/*"],
+      "@constants/*": ["constants/*"],
+      "@controllers/*": ["controllers/*"],
+      "@database/*": ["database/*"],
+      "@documents/*": ["documents/*"],
+      "@events/*": ["events/*"],
+      "@exceptions/*": ["exceptions/*"],
+      "@listeners/*": ["listeners/*"],
+      "@middlewares/*": ["middlewares/*"],
+      "@public/*": ["public/*"],
+      "@requests/*": ["requests/*"],
+      "@routes/*": ["routes/*"],
+      "@services/*": ["services/*"],
+      "@utils/*": ["utils/*"],
+      "@storage/*": ["storage/*"]
+    }
+  }
+}

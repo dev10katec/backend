@@ -1,0 +1,66 @@
+securityDefinitions:
+  bearerAuth:
+    type: apiKey
+    in: header
+    name: Authorization
+    description: 'Bearer token for authentication'
+
+paths:
+  /auth/register:
+    post:
+      tags:
+        - Auth
+      summary: Register
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: sign up
+          description: sign up for a new account
+          required: false
+          schema:
+            $ref: '#/definitions/user'
+      responses:
+        201:
+          description: success
+        422:
+          description: validation
+        400:
+          description: email has been already exist
+        500:
+          description: internal server error
+  /auth/login:
+    post:
+      tags:
+        - Auth
+      summary: Login
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: sign in
+          description: sign in to your account
+          required: false
+          schema:
+            $ref: '#/definitions/user'
+      responses:
+        200:
+          description: success
+        422:
+          description: validation
+        400:
+          description: these credentials do not match our records
+        500:
+          description: internal server error
+definitions:
+  user:
+    type: object
+    properties:
+      email:
+        type: string
+        example: johndoe@example.com
+        description: email
+      password:
+        type: string
+        example: Password12#$
+        description: strong password

@@ -1,0 +1,17 @@
+node_modules
+package-lock.json
+.env
+.idea
+.vscode
+.qodo
+
+src/public/*
+!src/public/.gitkeep
+
+src/storage/cached/*
+src/storage/tmp/*
+src/storage/logs/*
+
+!src/storage/cached/.gitkeep
+!src/storage/tmp/.gitkeep
+!src/storage/logs/.gitkeep
